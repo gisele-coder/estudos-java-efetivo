@@ -1,17 +1,26 @@
+import Cap2.DependencyInjection;
+import Cap2.Person1;
+import Cap2.Person2;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
         // Press Alt+Enter with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome Deva!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        DependencyInjection.Engine carEngine = new DependencyInjection.Engine(); // Crie uma instância de Engine
+        DependencyInjection.Car myCar = new DependencyInjection.Car(carEngine); // Injete a dependência (Engine) no construtor de Car
+        myCar.startCar(); // Inicialize o carro
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        System.out.println("Hello and welcome Deva!");
+
+        Person1 person1 = Person1.createPerson("Alice", 30);
+
+        Person2 person2 = new Person2.Builder("Alice", "Johnson")
+                .age(30)
+                .address("123 Main St")
+                .build();
+
     }
 }
