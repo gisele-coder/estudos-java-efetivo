@@ -1,5 +1,7 @@
 package Cap2;
 
+import java.util.regex.Pattern;
+
 public class DependencyInjection {
 
     // Classe Engine
