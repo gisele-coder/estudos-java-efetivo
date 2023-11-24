@@ -1,18 +1,19 @@
-import Cap2.DependencyInjection;
-import Cap2.Person1;
-import Cap2.Person2;
-import Cap2.Stack;
+import Cap2.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
 
+        //new Room(10).close();
+
+        try(Room myRoom = new Room(7)) {
+            System.out.println("goodbye");
+        }
+
+        /*
         Stack stack = new Stack();
         stack.push(new String("Um"));
         stack.push(new String("Dois"));
@@ -40,6 +41,7 @@ public class Main {
 
         String objetoRemovido = lista.remove(0);
         objetoRemovido = null;
+        */
 
     }
 }
