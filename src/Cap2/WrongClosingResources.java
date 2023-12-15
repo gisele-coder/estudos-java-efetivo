@@ -2,7 +2,7 @@ package Cap2;
 
 import java.io.*;
 
-public class ClosingResources {
+public class WrongClosingResources {
 
     private static final int BUFFER_SIZE = 10;
 
